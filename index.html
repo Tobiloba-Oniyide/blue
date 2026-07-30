@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlueTrust Consulting Limited | Experts in Consulting Services and Solutions</title>
+<meta name="description" content="BlueTrust Consulting delivers audit, risk, financial advisory, strategy, people services and ESG consulting — helping businesses navigate complexity and grow sustainably.">
+<meta property="og:title" content="BlueTrust Consulting Limited">
+<meta property="og:description" content="Experts in Consulting Services and Solutions.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Blue Trust Consulting Limited",
+  "description": "Audit, risk management, financial advisory, strategy, people services and ESG compliance consulting.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lekki Phase 1",
+    "addressLocality": "Lagos",
+    "addressCountry": "Nigeria"
+  },
+  "telephone": "+234-9022220007",
+  "email": "btconsultingng@gmail.com",
+  "url": "https://www.bluetrustconsult.com"
+}
+</script>
+<style>
+  :root{
+    --royal:#0B4EA2;
+    --navy:#0A2540;
+    --cyan:#16C5FF;
+    --bg:#FFFFFF;
+    --bg-soft:#F7F9FC;
+    --text:#1E293B;
+    --success:#00B67A;
+    --ring: rgba(22,197,255,.35);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.font-display{font-family:'Poppins',sans-serif;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;
+    font-weight:700;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--royal);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:2px;
+    background:linear-gradient(90deg,var(--royal),var(--cyan));
+    display:inline-block;
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:15px 30px;border-radius:999px;font-weight:600;font-size:15px;
+    cursor:pointer;border:none;transition:all .35s cubic-bezier(.2,.7,.3,1);
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:linear-gradient(90deg,var(--royal),#1264C9,var(--cyan));
+    background-size:200% 100%;
+    color:#fff;
+    box-shadow:0 10px 30px -8px rgba(11,78,162,.55);
+  }
+  .btn-primary:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 16px 34px -8px rgba(11,78,162,.65);}
+  .btn-ghost{
+    background:rgba(255,255,255,.06);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.35);
+    backdrop-filter:blur(6px);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.16);border-color:#fff;}
+  .btn-outline{
+    background:transparent;color:var(--navy);border:1.5px solid #D7E1EF;
+  }
+  .btn-outline:hover{border-color:var(--royal);color:var(--royal);background:#EFF6FF;}
+
+  /* NAV */
+  #nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:22px 0;transition:all .4s ease;
+  }
+  #nav .wrap{display:flex;align-items:center;justify-content:space-between;}
+  #nav.scrolled{
+    padding:12px 0;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);
+    box-shadow:0 6px 30px -14px rgba(10,37,64,.25);
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-weight:700;font-size:19px;color:#fff;transition:color .4s;}
+  #nav.scrolled .logo{color:var(--navy);}
+  .logo .mark{
+    width:34px;height:34px;border-radius:9px;
+    background:linear-gradient(135deg,var(--royal),var(--cyan));
+    display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px;
+    box-shadow:0 4px 14px -2px rgba(11,78,162,.5);
+  }
+  .nav-links{display:flex;gap:34px;align-items:center;}
+  .nav-links a{
+    font-size:14.5px;font-weight:500;color:rgba(255,255,255,.88);position:relative;padding:4px 0;transition:color .3s;
+  }
+  #nav.scrolled .nav-links a{color:#334155;}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--cyan);transition:width .3s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a:hover{color:#fff;}
+  #nav.scrolled .nav-links a:hover{color:var(--royal);}
+  .nav-cta{display:flex;align-items:center;gap:14px;}
+  #burger{display:none;background:none;border:none;color:#fff;cursor:pointer;}
+  #nav.scrolled #burger{color:var(--navy);}
+
+  #mobile-drawer{
+    position:fixed;inset:0;z-index:200;background:var(--navy);
+    display:flex;flex-direction:column;padding:28px 26px;
+    transform:translateX(100%);transition:transform .45s cubic-bezier(.2,.8,.2,1);
+  }
+  #mobile-drawer.open{transform:translateX(0);}
+  #mobile-drawer a{color:#fff;font-size:22px;font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-family:'Poppins',sans-serif;}
+  #mobile-drawer .close-x{align-self:flex-end;color:#fff;background:none;border:none;margin-bottom:20px;cursor:pointer;}
+
+  /* HERO */
+  #hero{
+    position:relative;min-height:100vh;display:flex;align-items:center;
+    background:radial-gradient(1200px 700px at 15% 10%, #0F5CC0 0%, var(--navy) 55%, #061627 100%);
+    overflow:hidden;padding-top:120px;padding-bottom:80px;
+  }
+  #hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55;}
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative;z-index:2;
+  }
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;
+    background:rgba(22,197,255,.12);border:1px solid rgba(22,197,255,.35);
+    color:#8FE1FF;font-size:13px;font-weight:600;margin-bottom:26px;
+  }
+  .hero-badge span.dot{width:7px;height:7px;border-radius:50%;background:var(--success);box-shadow:0 0 0 4px rgba(0,182,122,.25);}
+  h1.hero-title{
+    font-size:clamp(38px,5.4vw,64px);line-height:1.06;color:#fff;font-weight:800;margin:0 0 22px;letter-spacing:-.01em;
+  }
+  h1.hero-title em{
+    font-style:normal;
+    background:linear-gradient(90deg,#8FE1FF,var(--cyan));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-sub{font-size:18px;line-height:1.7;color:rgba(255,255,255,.72);max-width:520px;margin-bottom:36px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:56px;}
+  .watch-link{display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:600;font-size:15px;padding:15px 6px;}
+  .watch-link .play{
+    width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);
+    display:flex;align-items:center;justify-content:center;transition:all .3s;
+  }
+  .watch-link:hover .play{background:var(--cyan);border-color:var(--cyan);color:var(--navy);}
+
+  .hero-visual{position:relative;height:520px;display:flex;align-items:center;justify-content:center;}
+  .float-card{
+    position:absolute;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    backdrop-filter:blur(16px);border-radius:18px;padding:20px 22px;color:#fff;
+    box-shadow:0 20px 50px -18px rgba(0,0,0,.5);
+  }
+  .fc1{top:6%;left:2%;width:230px;animation:floaty 6s ease-in-out infinite;}
+  .fc2{bottom:12%;left:14%;width:210px;animation:floaty 7s ease-in-out infinite .8s;}
+  .fc3{top:38%;right:0%;width:190px;animation:floaty 8s ease-in-out infinite .3s;}
+  @keyframes floaty{0%,100%{transform:translateY(0px);}50%{transform:translateY(-16px);}}
+  .fc-label{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:6px;letter-spacing:.05em;text-transform:uppercase;}
+  .fc-value{font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;display:flex;align-items:center;gap:8px;}
+  .fc-value .up{color:var(--success);font-size:14px;font-weight:600;}
+  .core-orb{
+    width:300px;height:300px;border-radius:50%;
+    background:conic-gradient(from 90deg, rgba(22,197,255,.5), rgba(11,78,162,.1), rgba(22,197,255,.5));
+    filter:blur(2px);position:relative;
+    animation:spin 18s linear infinite;
+  }
+  .core-orb::after{
+    content:"";position:absolute;inset:14px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #123a6b, #061627 70%);
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* STATS */
+  #stats{background:var(--bg-soft);padding:70px 0;position:relative;margin-top:-2px;}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .stat-item{text-align:center;padding:24px 10px;position:relative;}
+  .stat-item:not(:last-child)::after{
+    content:"";position:absolute;right:-10px;top:20%;bottom:20%;width:1px;background:#DCE6F5;
+  }
+  .stat-num{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(32px,4vw,46px);color:var(--navy);}
+  .stat-num .plus{color:var(--cyan);}
+  .stat-label{color:#64748B;font-size:14.5px;font-weight:500;margin-top:6px;}
+
+  /* SECTION generic */
+  section{padding:110px 0;}
+  .section-head{max-width:640px;margin-bottom:60px;}
+  .section-title{font-size:clamp(28px,3.4vw,42px);font-weight:700;color:var(--navy);margin:16px 0 0;line-height:1.2;}
+  .section-desc{color:#64748B;font-size:16px;line-height:1.7;margin-top:18px;}
+  .center{text-align:center;margin-left:auto;margin-right:auto;}
+
+  /* WHY US */
+  #why{background:#fff;}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+  .why-card{
+    padding:32px 28px;border-radius:20px;background:#fff;border:1px solid #EAEFF7;
+    box-shadow:0 2px 0 rgba(10,37,64,.02);transition:all .4s cubic-bezier(.2,.7,.3,1);position:relative;overflow:hidden;
+  }
+  .why-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -24px rgba(11,78,162,.25);border-color:transparent;}
+  .why-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--royal),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .4s ease;
+  }
+  .why-card:hover::before{transform:scaleX(1);}
+  .why-icon{
+    width:52px;height:52px;border-radius:14px;background:#EFF6FF;color:var(--royal);
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:all .35s;
+  }
+  .why-card:hover .why-icon{background:var(--royal);color:#fff;transform:rotate(-6deg) scale(1.05);}
+  .why-card h3{font-size:18px;margin:0 0 10px;color:var(--navy);}
+  .why-card p{font-size:14.5px;color:#64748B;line-height:1.6;margin:0;}
+
+  /* ABOUT */
+  #about{background:var(--bg-soft);}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;}
+  .about-photo{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;
+    background:linear-gradient(160deg,#DCEBFF,#F7F9FC);border:1px solid #E2ECF9;}
+  .about-photo svg{width:100%;height:100%;}
+  .about-badge{
+    position:absolute;bottom:22px;left:22px;right:22px;background:#fff;border-radius:16px;padding:18px 20px;
+    box-shadow:0 20px 40px -16px rgba(10,37,64,.25);display:flex;align-items:center;gap:14px;
+  }
+  .about-badge .ring{
+    width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:conic-gradient(var(--success) 98%, #E2ECF9 0);font-weight:700;color:var(--navy);font-size:13px;position:relative;
+  }
+  .about-badge .ring::after{content:"";position:absolute;inset:5px;border-radius:50%;background:#fff;}
+  .about-badge .ring span{position:relative;z-index:1;}
+  .values-row{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .value-pill{
+    padding:14px 18px;border-radius:14px;background:#fff;border:1px solid #E2ECF9;flex:1;min-width:150px;
+  }
+  .value-pill .num{font-family:'Poppins',sans-serif;font-weight:700;color:var(--royal);font-size:14px;}
+  .value-pill p{margin:4px 0 0;font-size:13.5px;color:#475569;}
+  .timeline{margin-top:36px;border-left:2px solid #DCE6F5;padding-left:26px;position:relative;}
+  .t-item{padding-bottom:26px;position:relative;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{content:"";position:absolute;left:-32px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--royal);border:3px solid #DCEBFF;}
+  .t-year{font-weight:700;color:var(--navy);font-size:14.5px;}
+  .t-item p{margin:4px 0 0;color:#64748B;font-size:14px;}
+
+  /* SERVICES */
+  #services{background:#fff;}
+  .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+  .service-card{
+    border-radius:20px;padding:2px;background:linear-gradient(160deg,#EAEFF7,#F7F9FC);position:relative;
+  }
+  .service-inner{
+    background:#fff;border-radius:18px;padding:30px 26px;height:100%;display:flex;flex-direction:column;
+    transition:all .4s cubic-bezier(.2,.7,.3,1);
+  }
+  .service-card:hover .service-inner{background:linear-gradient(160deg,#F7FBFF,#fff);}
+  .service-card:hover{background:linear-gradient(160deg,var(--royal),var(--cyan));}
+  .service-icon{
+    width:50px;height:50px;border-radius:13px;background:#EFF6FF;color:var(--royal);
+    display:flex;align-items:center;justify-content:center;margin-bottom:22px;
+  }
+  .service-inner h3{font-size:17.5px;color:var(--navy);margin:0 0 10px;}
+  .service-inner p{font-size:14px;color:#64748B;line-height:1.65;margin:0 0 20px;flex-grow:1;}
+  .service-link{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14px;color:var(--royal);}
+  .service-link svg{transition:transform .3s;}
+  .service-card:hover .service-link svg{transform:translateX(4px);}
+
+  /* PROJECTS */
+  #projects{background:var(--bg-soft);}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;}
+  .filter-btn{
+    padding:9px 18px;border-radius:999px;font-size:13.5px;font-weight:600;border:1px solid #DCE6F5;background:#fff;color:#475569;cursor:pointer;transition:all .3s;
+  }
+  .filter-btn.active,.filter-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;}
+  .project-card{
+    border-radius:20px;overflow:hidden;position:relative;height:280px;cursor:pointer;
+    background:linear-gradient(140deg,var(--navy),#123a6b);
+  }
+  .project-card .p-img{position:absolute;inset:0;transition:transform .6s cubic-bezier(.2,.7,.3,1);opacity:.55;}
+  .project-card:hover .p-img{transform:scale(1.12);}
+  .project-card .p-overlay{
+    position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,22,39,.92) 10%,transparent 60%);
+    display:flex;flex-direction:column;justify-content:flex-end;padding:24px;
+  }
+  .p-cat{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:8px;}
+  .p-title{font-family:'Poppins',sans-serif;color:#fff;font-size:19px;font-weight:600;}
+
+  /* HOW WE WORK */
+  #process{background:#fff;}
+  .process-line{position:relative;padding-left:0;}
+  .process-track{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .process-track::before{
+    content:"";position:absolute;top:34px;left:6%;right:6%;height:2px;background:#E2ECF9;z-index:0;
+  }
+  .process-bar{position:absolute;top:34px;left:6%;height:2px;background:linear-gradient(90deg,var(--royal),var(--cyan));width:0%;z-index:1;transition:width 1.2s ease;}
+  .p-step{position:relative;z-index:2;text-align:left;}
+  .p-num{
+    width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--royal);color:var(--royal);
+    display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;
+    margin-bottom:22px;transition:all .4s;
+  }
+  .p-step.active .p-num{background:linear-gradient(135deg,var(--royal),var(--cyan));color:#fff;border-color:transparent;box-shadow:0 10px 26px -8px rgba(11,78,162,.5);}
+  .p-step h3{font-size:16.5px;color:var(--navy);margin:0 0 8px;}
+  .p-step p{font-size:13.5px;color:#64748B;margin:0;line-height:1.6;}
+
+  /* TEAM */
+  #team{background:var(--bg-soft);}
+  .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;}
+  .team-card{background:#fff;border-radius:22px;padding:26px;text-align:center;border:1px solid #EAEFF7;transition:all .4s;}
+  .team-card:hover{transform:translateY(-6px);box-shadow:0 26px 50px -22px rgba(11,78,162,.25);}
+  .team-photo{
+    width:120px;height:120px;border-radius:50%;margin:0 auto 18px;position:relative;padding:4px;
+    background:conic-gradient(var(--royal),var(--cyan),var(--royal));
+  }
+  .team-photo .inner{width:100%;height:100%;border-radius:50%;background:#DCEBFF;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .team-card h3{font-size:16.5px;margin:0 0 4px;color:var(--navy);}
+  .team-card .role{font-size:13.5px;color:var(--royal);font-weight:600;margin-bottom:14px;}
+  .team-social{display:flex;justify-content:center;gap:10px;}
+  .team-social a{width:34px;height:34px;border-radius:50%;background:#EFF6FF;color:var(--royal);display:flex;align-items:center;justify-content:center;transition:all .3s;}
+  .team-social a:hover{background:var(--royal);color:#fff;}
+
+  /* TESTIMONIALS */
+  #testimonials{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+  #testimonials::before{
+    content:"";position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(22,197,255,.15),transparent 70%);
+  }
+  .test-track-wrap{position:relative;z-index:1;}
+  .test-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);
+    border-radius:22px;padding:34px;display:none;
+  }
+  .test-card.active{display:block;animation:fadein .6s ease;}
+  @keyframes fadein{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  .stars{color:#FFC93C;display:flex;gap:3px;margin-bottom:18px;}
+  .test-quote{font-size:19px;line-height:1.7;font-weight:400;color:rgba(255,255,255,.92);margin:0 0 26px;}
+  .test-person{display:flex;align-items:center;gap:14px;}
+  .test-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--royal),var(--cyan));}
+  .test-name{font-weight:600;font-size:14.5px;}
+  .test-co{font-size:13px;color:rgba(255,255,255,.55);}
+  .test-dots{display:flex;gap:8px;margin-top:28px;justify-content:center;}
+  .test-dots button{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25);border:none;cursor:pointer;transition:all .3s;}
+  .test-dots button.active{background:var(--cyan);width:24px;border-radius:6px;}
+
+  /* CALLBACK */
+  #callback{background:#fff;}
+  .cb-wrap{background:var(--bg-soft);border-radius:28px;padding:56px;display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;}
+  .cb-info h2{font-size:28px;color:var(--navy);margin:16px 0 14px;}
+  .cb-info p{color:#64748B;font-size:15px;line-height:1.7;}
+  .cb-points{margin-top:26px;display:flex;flex-direction:column;gap:14px;}
+  .cb-point{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--navy);font-weight:500;}
+  .cb-point svg{color:var(--success);flex-shrink:0;}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .field{display:flex;flex-direction:column;gap:7px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:13px;font-weight:600;color:var(--navy);}
+  .field input,.field select,.field textarea{
+    padding:13px 15px;border-radius:12px;border:1.5px solid #DCE6F5;background:#fff;font-family:'Inter',sans-serif;
+    font-size:14.5px;color:var(--text);transition:all .25s;outline:none;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--royal);box-shadow:0 0 0 4px var(--ring);}
+  .field .err{font-size:12px;color:#DC2626;min-height:14px;}
+  .submit-row{grid-column:1/-1;display:flex;align-items:center;gap:16px;margin-top:6px;}
+  #formSuccess{
+    display:none;align-items:center;gap:10px;color:var(--success);font-weight:600;font-size:14.5px;
+  }
+
+  /* PARTNERS */
+  #partners{padding:70px 0;background:var(--bg-soft);overflow:hidden;}
+  .marquee{display:flex;gap:60px;width:max-content;animation:scroll 26s linear infinite;}
+  .marquee-item{
+    font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:#B7C4D9;filter:grayscale(1);
+    transition:all .3s;white-space:nowrap;display:flex;align-items:center;
+  }
+  .marquee-item:hover{color:var(--royal);filter:none;}
+  @keyframes scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* CONTACT */
+  #contact{background:#fff;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact-card{background:var(--bg-soft);border-radius:22px;padding:36px;}
+  .contact-row{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid #E2ECF9;}
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row .ic{width:42px;height:42px;border-radius:11px;background:#EFF6FF;color:var(--royal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contact-row .label{font-size:12.5px;color:#64748B;text-transform:uppercase;letter-spacing:.06em;}
+  .contact-row .val{font-weight:600;color:var(--navy);font-size:15px;margin-top:2px;}
+  .map-box{border-radius:22px;overflow:hidden;min-height:340px;position:relative;}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:rgba(255,255,255,.75);padding:80px 0 0;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer-grid h4{color:#fff;font-size:15px;margin:0 0 18px;}
+  .footer-grid a{display:block;color:rgba(255,255,255,.65);font-size:14px;margin-bottom:11px;transition:color .25s;}
+  .footer-grid a:hover{color:var(--cyan);}
+  .footer-socials{display:flex;gap:10px;margin-top:18px;}
+  .footer-socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;}
+  .footer-socials a:hover{background:var(--cyan);color:var(--navy);}
+  .newsletter-row{display:flex;gap:8px;margin-top:14px;}
+  .newsletter-row input{flex:1;padding:11px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-size:13.5px;}
+  .newsletter-row input::placeholder{color:rgba(255,255,255,.4);}
+  .newsletter-row button{padding:0 16px;border-radius:10px;background:var(--cyan);border:none;color:var(--navy);cursor:pointer;font-weight:700;}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding:26px 0;font-size:13px;color:rgba(255,255,255,.45);flex-wrap:wrap;gap:12px;}
+  .footer-bottom .legal-links{display:flex;gap:20px;}
+  .footer-bottom .legal-links a{color:rgba(255,255,255,.45);}
+  .footer-bottom .legal-links a:hover{color:#fff;}
+  #toTop{
+    position:fixed;bottom:26px;right:26px;width:48px;height:48px;border-radius:50%;
+    background:var(--royal);color:#fff;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 24px -6px rgba(11,78,162,.5);cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:all .35s;
+  }
+  #toTop.show{opacity:1;pointer-events:auto;}
+
+  [data-reveal]{opacity:0;transform:translateY(28px);transition:all .8s cubic-bezier(.2,.7,.2,1);}
+  [data-reveal].in{opacity:1;transform:translateY(0);}
+
+  :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;}
+
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{height:380px;margin-top:20px;}
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .about-grid, .contact-grid, .cb-wrap{grid-template-columns:1fr;}
+    .cb-wrap{padding:30px;}
+    .footer-grid{grid-template-columns:repeat(2,1fr);}
+    .nav-links{display:none;}
+    .nav-cta .btn-primary{display:none;}
+    #burger{display:flex;}
+    .process-track{grid-template-columns:1fr 1fr;row-gap:40px;}
+    .process-track::before,.process-bar{display:none;}
+  }
+  @media (max-width:600px){
+    .form-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    section{padding:80px 0;}
+    .stat-item:not(:last-child)::after{display:none;}
+    .process-track{grid-template-columns:1fr;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001s !important;transition-duration:.001s !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap">
+    <a href="#hero" class="logo"><span class="mark">BT</span> BlueTrust</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#process">How We Work</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#callback" class="btn btn-primary">Request Consultation</a>
+      <button id="burger" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-drawer">
+  <button class="close-x" aria-label="Close menu"><i data-lucide="x" style="width:28px;height:28px;"></i></button>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#process">How We Work</a>
+  <a href="#team">Team</a>
+  <a href="#contact">Contact</a>
+  <a href="#callback" style="color:var(--cyan);">Request Consultation →</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="ledger"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> Trusted by 100+ businesses across Nigeria &amp; beyond</div>
+      <h1 class="hero-title">Expert Consulting<br><em>Solutions</em>, Built On Trust</h1>
+      <p class="hero-sub">We are experts in consulting services and solutions — helping businesses navigate complex challenges and achieve sustainable growth through ethical consulting and measurable results.</p>
+      <div class="hero-ctas">
+        <a href="#services" class="btn btn-primary"><i data-lucide="compass" style="width:18px;height:18px;"></i> Explore Services</a>
+        <a href="#callback" class="btn btn-ghost"><i data-lucide="calendar-check" style="width:18px;height:18px;"></i> Request Consultation</a>
+      </div>
+      <a href="#" class="watch-link"><span class="play"><i data-lucide="play" style="width:15px;height:15px;"></i></span> Watch Company Overview</a>
+    </div>
+    <div class="hero-visual">
+      <div class="core-orb"></div>
+      <div class="float-card fc1">
+        <div class="fc-label">Client Growth</div>
+        <div class="fc-value">4.2x <span class="up">↑ 18%</span></div>
+      </div>
+      <div class="float-card fc2">
+        <div class="fc-label">Risk Score Reduced</div>
+        <div class="fc-value">-62% <span class="up">On track</span></div>
+      </div>
+      <div class="float-card fc3">
+        <div class="fc-label">ESG Rating</div>
+        <div class="fc-value">A+ <span class="up">Verified</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="wrap stats-grid">
+    <div class="stat-item" data-reveal><div class="stat-num" data-count="10">0</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat-item" data-reveal><div class="stat-num" data-count="8">0</div><div class="stat-label">Consulting Services</div></div>
+    <div class="stat-item" data-reveal><div class="stat-num" data-count="100">0</div><div class="stat-label">Businesses Served</div></div>
+    <div class="stat-item" data-reveal><div class="stat-num" data-count="98" data-suffix="%">0</div><div class="stat-label">Client Satisfaction</div></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Why BlueTrust</span>
+      <h2 class="section-title">Consulting That Earns Its Name</h2>
+      <p class="section-desc">Every engagement is built on rigor, transparency, and a genuine stake in your outcome — not just a report at the end.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="badge-check"></i></div><h3>Proven Expertise</h3><p>Decades of combined experience across audit, finance, strategy and technology.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="shield-check"></i></div><h3>Trusted Organizations</h3><p>Relied upon by growing businesses and institutions who need clarity, not jargon.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="scale"></i></div><h3>Ethical Approach</h3><p>Independent, conflict-free advice — our recommendations serve you, not a hidden agenda.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="target"></i></div><h3>Results-Driven</h3><p>We measure success the way you do — in performance, savings, and growth.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="compass"></i></div><h3>Strategic Clarity</h3><p>We cut through complexity to give you a plan you can actually act on.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="handshake"></i></div><h3>Trusted Execution</h3><p>We stay hands-on from strategy through implementation — not just slides.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="bar-chart-3"></i></div><h3>Measured Results</h3><p>Every recommendation is tied to a metric you can track and verify.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i data-lucide="lightbulb"></i></div><h3>Forward-Thinking</h3><p>We build for where your business is going, not just where it is today.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div data-reveal>
+      <div class="about-photo">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="ag" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0B4EA2"/>
+              <stop offset="100%" stop-color="#16C5FF"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#ag)" opacity="0.12"/>
+          <g stroke="#0B4EA2" stroke-width="1.4" opacity="0.4">
+            <line x1="30" y1="420" x2="370" y2="420"/>
+            <polyline points="50,400 110,350 170,380 230,300 290,320 350,250" fill="none" stroke-width="2.5" stroke="#0B4EA2"/>
+          </g>
+          <circle cx="230" cy="300" r="6" fill="#16C5FF"/>
+          <circle cx="350" cy="250" r="6" fill="#16C5FF"/>
+          <rect x="140" y="150" width="120" height="120" rx="16" fill="#0A2540" opacity="0.85"/>
+          <text x="200" y="218" text-anchor="middle" fill="#fff" font-family="Poppins" font-weight="700" font-size="30">BT</text>
+        </svg>
+        <div class="about-badge">
+          <div class="ring"><span>10yrs</span></div>
+          <div>
+            <div style="font-weight:700;color:var(--navy);font-size:15px;">Sustainable growth,</div>
+            <div style="font-size:13px;color:#64748B;">measured in outcomes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-reveal>
+      <span class="eyebrow">About BlueTrust</span>
+      <h2 class="section-title">Fresh Ideas For Every Business</h2>
+      <p class="section-desc">BlueTrust delivers comprehensive consulting across audit, risk management, financial advisory, strategy development, people services, and ESG compliance. With over 10 years of experience, we help businesses navigate complex challenges and achieve sustainable growth through ethical consulting and measurable business results.</p>
+      <div class="values-row">
+        <div class="value-pill"><div class="num">Mission</div><p>Deliver consulting that creates measurable, lasting value.</p></div>
+        <div class="value-pill"><div class="num">Vision</div><p>Be the most trusted advisory partner in the region.</p></div>
+        <div class="value-pill"><div class="num">Values</div><p>Integrity, rigor, partnership, and results.</p></div>
+      </div>
+      <div class="timeline">
+        <div class="t-item"><div class="t-year">2015 — Founded</div><p>BlueTrust opens its doors with a small audit and advisory practice.</p></div>
+        <div class="t-item"><div class="t-year">2019 — Expansion</div><p>Strategy, people services and IT consulting added to the practice.</p></div>
+        <div class="t-item"><div class="t-year">2023 — ESG Practice</div><p>Sustainability and ESG compliance become a core service line.</p></div>
+        <div class="t-item"><div class="t-year">Today — 100+ Clients</div><p>Serving businesses across sectors with a 98% satisfaction rate.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">What We Do</span>
+      <h2 class="section-title">Consulting Services Built Around Your Business</h2>
+      <p class="section-desc">Eight practice areas, one accountable partner — engage one service or build an integrated program.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="briefcase"></i></div><h3>Business Services Consulting</h3><p>Operational advisory to streamline processes and unlock efficiency across your business.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="shield-check"></i></div><h3>Audit, Risk &amp; Compliance</h3><p>Independent audits and risk frameworks that protect your business and build stakeholder confidence.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="line-chart"></i></div><h3>Financial &amp; Deals Advisory</h3><p>Transaction support, valuations and financial structuring for growth and M&amp;A.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="calculator"></i></div><h3>Accounting, Forensics &amp; Tax</h3><p>Forensic investigations, tax advisory and accounting services built for compliance and clarity.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="compass"></i></div><h3>Strategy Advisory</h3><p>Corporate and market strategy grounded in data, not guesswork.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="users"></i></div><h3>People &amp; Workforce Services</h3><p>HR strategy, org design and workforce planning that puts people at the center.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="cpu"></i></div><h3>Information Technology Consulting</h3><p>Technology strategy and systems advisory to modernize how your business runs.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+      <div class="service-card" data-reveal><div class="service-inner"><div class="service-icon"><i data-lucide="leaf"></i></div><h3>Sustainability (ESG)</h3><p>ESG strategy, reporting and compliance built for long-term resilience.</p><a class="service-link" href="#contact">Learn more <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Our Work</span>
+      <h2 class="section-title">Selected Engagements</h2>
+      <p class="section-desc">A snapshot of the kind of work we do — across sectors and challenge types.</p>
+    </div>
+    <div class="filters" data-reveal>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="finance">Financial Advisory</button>
+      <button class="filter-btn" data-filter="risk">Risk &amp; ESG</button>
+      <button class="filter-btn" data-filter="strategy">Strategy &amp; Ops</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card" data-cat="finance" data-reveal>
+        <div class="p-img" style="background:linear-gradient(135deg,#0B4EA2,#0A2540);"></div>
+        <div class="p-overlay"><div class="p-cat">Financial Advisory</div><div class="p-title">Regional Bank Valuation &amp; Deal Structuring</div></div>
+      </div>
+      <div class="project-card" data-cat="risk" data-reveal>
+        <div class="p-img" style="background:linear-gradient(135deg,#123a6b,#16C5FF);"></div>
+        <div class="p-overlay"><div class="p-cat">Risk Assessment</div><div class="p-title">Enterprise Risk Framework for a Logistics Group</div></div>
+      </div>
+      <div class="project-card" data-cat="strategy" data-reveal>
+        <div class="p-img" style="background:linear-gradient(135deg,#0A2540,#0B4EA2);"></div>
+        <div class="p-overlay"><div class="p-cat">Market Intelligence</div><div class="p-title">Market Entry Study for a Consumer Brand</div></div>
+      </div>
+      <div class="project-card" data-cat="strategy" data-reveal>
+        <div class="p-img" style="background:linear-gradient(135deg,#16C5FF,#0B4EA2);"></div>
+        <div class="p-overlay"><div class="p-cat">Business Transformation</div><div class="p-title">Digital Transformation for a Retail Chain</div></div>
+      </div>
+      <div class="project-card" data-cat="strategy" data-reveal>
+        <div class="p-img" style="background:linear-gradient(135deg,#0A2540,#123a6b);"></div>
+        <div class="p-overlay"><div class="p-cat">Operational Improvement</div><div class="p-title">Process Redesign for a Manufacturing Client</div></div>
+      </div>
+      <div class="project-card" data-cat="risk" data-reveal>
+        <div class="p-img" style="background:linear-gradient(135deg,#0B4EA2,#16C5FF);"></div>
+        <div class="p-overlay"><div class="p-cat">ESG Reporting</div><div class="p-title">ESG Disclosure Program for an Energy Firm</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">How We Work</span>
+      <h2 class="section-title">A Clear Path From First Call To Impact</h2>
+    </div>
+    <div class="process-track" id="processTrack">
+      <div class="process-bar" id="processBar"></div>
+      <div class="p-step" data-reveal><div class="p-num">01</div><h3>Staffing Solution</h3><p>We assemble the right specialists for your specific challenge.</p></div>
+      <div class="p-step" data-reveal><div class="p-num">02</div><h3>Understand Your Business</h3><p>Deep discovery into your operations, risks and goals.</p></div>
+      <div class="p-step" data-reveal><div class="p-num">03</div><h3>Develop &amp; Implement</h3><p>A clear plan, built with you and put into action.</p></div>
+      <div class="p-step" data-reveal><div class="p-num">04</div><h3>Become a Value-Added Partner</h3><p>We stay engaged, measuring impact long after delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Leadership</span>
+      <h2 class="section-title">The People Behind BlueTrust</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card" data-reveal>
+        <div class="team-photo"><div class="inner"><i data-lucide="user" style="width:46px;height:46px;color:#0B4EA2;"></i></div></div>
+        <h3>Peter Hart</h3><div class="role">Chief Executive Officer</div>
+        <div class="team-social"><a href="#"><i data-lucide="linkedin" style="width:16px;height:16px;"></i></a><a href="#"><i data-lucide="mail" style="width:16px;height:16px;"></i></a></div>
+      </div>
+      <div class="team-card" data-reveal>
+        <div class="team-photo"><div class="inner"><i data-lucide="user" style="width:46px;height:46px;color:#0B4EA2;"></i></div></div>
+        <h3>Rose Lewis</h3><div class="role">Chief Marketing Officer</div>
+        <div class="team-social"><a href="#"><i data-lucide="linkedin" style="width:16px;height:16px;"></i></a><a href="#"><i data-lucide="mail" style="width:16px;height:16px;"></i></a></div>
+      </div>
+      <div class="team-card" data-reveal>
+        <div class="team-photo"><div class="inner"><i data-lucide="user" style="width:46px;height:46px;color:#0B4EA2;"></i></div></div>
+        <h3>Kevin Gardner</h3><div class="role">Chief Financial Officer</div>
+        <div class="team-social"><a href="#"><i data-lucide="linkedin" style="width:16px;height:16px;"></i></a><a href="#"><i data-lucide="mail" style="width:16px;height:16px;"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head center" data-reveal style="max-width:600px;">
+      <span class="eyebrow" style="color:#8FE1FF;">Client Voices</span>
+      <h2 class="section-title" style="color:#fff;">Trusted By Businesses Like Yours</h2>
+    </div>
+    <div class="test-track-wrap" data-reveal style="max-width:720px;margin:0 auto;">
+      <div class="test-card active">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">BlueTrust didn't just hand us a report — they stayed with us through implementation. Our risk exposure dropped within two quarters.</p>
+        <div class="test-person"><div class="test-avatar"></div><div><div class="test-name">Adaeze Okonkwo</div><div class="test-co">COO, Meridian Logistics</div></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">The ESG program they built gave us a clear, credible story for investors. Genuinely strategic, not just compliance paperwork.</p>
+        <div class="test-person"><div class="test-avatar"></div><div><div class="test-name">Tunde Bakare</div><div class="test-co">CEO, Solara Energy</div></div></div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">Clear thinking, honest advice, and a team that actually understood our sector. Exactly what consulting should feel like.</p>
+        <div class="test-person"><div class="test-avatar"></div><div><div class="test-name">Grace Nwachukwu</div><div class="test-co">Founder, Havenfield Retail</div></div></div>
+      </div>
+      <div class="test-dots">
+        <button class="active" data-i="0"></button><button data-i="1"></button><button data-i="2"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALLBACK -->
+<section id="callback">
+  <div class="wrap">
+    <div class="cb-wrap" data-reveal>
+      <div class="cb-info">
+        <span class="eyebrow">Get Started</span>
+        <h2>Request a Callback</h2>
+        <p>Tell us a little about your business and the challenge you're facing. A senior consultant will reach out within one business day.</p>
+        <div class="cb-points">
+          <div class="cb-point"><i data-lucide="check-circle-2" style="width:18px;height:18px;"></i> No obligation, no pressure</div>
+          <div class="cb-point"><i data-lucide="check-circle-2" style="width:18px;height:18px;"></i> Response within 1 business day</div>
+          <div class="cb-point"><i data-lucide="check-circle-2" style="width:18px;height:18px;"></i> Speak directly with a specialist</div>
+        </div>
+      </div>
+      <form id="cbForm" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="fname">Name</label><input id="fname" name="name" type="text" placeholder="Your full name" required><span class="err"></span></div>
+          <div class="field"><label for="fphone">Phone Number</label><input id="fphone" name="phone" type="tel" placeholder="+234..." required><span class="err"></span></div>
+          <div class="field"><label for="femail">Email</label><input id="femail" name="email" type="email" placeholder="you@company.com" required><span class="err"></span></div>
+          <div class="field"><label for="fcompany">Company</label><input id="fcompany" name="company" type="text" placeholder="Company name"><span class="err"></span></div>
+          <div class="field full"><label for="fservice">Service Interested In</label>
+            <select id="fservice" name="service" required>
+              <option value="">Select a service</option>
+              <option>Business Services Consulting</option>
+              <option>Audit, Risk and Compliance</option>
+              <option>Financial and Deals Advisory</option>
+              <option>Accounting, Forensics and Tax</option>
+              <option>Strategy Advisory</option>
+              <option>People and Workforce Services</option>
+              <option>Information Technology Consulting</option>
+              <option>Sustainability (ESG)</option>
+            </select><span class="err"></span>
+          </div>
+          <div class="field full"><label for="fmessage">Message</label><textarea id="fmessage" name="message" rows="4" placeholder="Tell us about your business need"></textarea><span class="err"></span></div>
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary" id="cbSubmit"><span id="cbBtnText">Request Callback</span></button>
+            <div id="formSuccess"><i data-lucide="check-circle-2"></i> Thanks — we'll be in touch within one business day.</div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <div class="wrap">
+    <p class="eyebrow center" style="display:flex;justify-content:center;margin-bottom:30px;">Trusted By Organizations Across Sectors</p>
+  </div>
+  <div class="marquee" id="marquee">
+    <div class="marquee-item">Meridian Logistics</div>
+    <div class="marquee-item">Solara Energy</div>
+    <div class="marquee-item">Havenfield Retail</div>
+    <div class="marquee-item">Nimbus Bank</div>
+    <div class="marquee-item">Cobalt Manufacturing</div>
+    <div class="marquee-item">Vantage Group</div>
+    <div class="marquee-item">Meridian Logistics</div>
+    <div class="marquee-item">Solara Energy</div>
+    <div class="marquee-item">Havenfield Retail</div>
+    <div class="marquee-item">Nimbus Bank</div>
+    <div class="marquee-item">Cobalt Manufacturing</div>
+    <div class="marquee-item">Vantage Group</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head center" data-reveal>
+      <span class="eyebrow">Contact Us</span>
+      <h2 class="section-title">Let's Talk About Your Business</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card" data-reveal>
+        <div class="contact-row"><div class="ic"><i data-lucide="map-pin"></i></div><div><div class="label">Office</div><div class="val">Blue Trust Consulting Limited<br>Lekki Phase 1, Lagos, Nigeria</div></div></div>
+        <div class="contact-row"><div class="ic"><i data-lucide="phone"></i></div><div><div class="label">Phone</div><div class="val">+234-9022220007</div></div></div>
+        <div class="contact-row"><div class="ic"><i data-lucide="mail"></i></div><div><div class="label">Email</div><div class="val">btconsultingng@gmail.com</div></div></div>
+        <div class="contact-row"><div class="ic"><i data-lucide="globe"></i></div><div><div class="label">Website</div><div class="val">www.bluetrustconsult.com</div></div></div>
+      </div>
+      <div class="map-box" data-reveal>
+        <iframe title="BlueTrust Consulting location — Lekki Phase 1, Lagos" src="https://www.google.com/maps?q=Lekki+Phase+1,+Lagos,+Nigeria&output=embed" width="100%" height="100%" style="border:0;min-height:340px;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="#hero" class="logo" style="color:#fff;margin-bottom:16px;"><span class="mark">BT</span> BlueTrust</a>
+        <p style="font-size:14px;line-height:1.7;color:rgba(255,255,255,.55);margin-top:16px;max-width:280px;">Experts in consulting services and solutions — audit, risk, strategy, and ESG advisory built on trust.</p>
+        <div class="footer-socials">
+          <a href="#"><i data-lucide="linkedin" style="width:16px;height:16px;"></i></a>
+          <a href="#"><i data-lucide="twitter" style="width:16px;height:16px;"></i></a>
+          <a href="#"><i data-lucide="instagram" style="width:16px;height:16px;"></i></a>
+        </div>
+      </div>
+      <div><h4>Company</h4><a href="#about">About</a><a href="#team">Team</a><a href="#">Careers</a><a href="#">Blog</a></div>
+      <div><h4>Services</h4><a href="#services">Audit &amp; Risk</a><a href="#services">Financial Advisory</a><a href="#services">Strategy</a><a href="#services">ESG</a></div>
+      <div><h4>Work</h4><a href="#projects">Projects</a><a href="#">FAQs</a><a href="#contact">Contact</a><a href="#callback">Request Consultation</a></div>
+      <div>
+        <h4>Newsletter</h4>
+        <p style="font-size:13.5px;color:rgba(255,255,255,.55);">Insights on strategy, risk and ESG — occasionally, never spam.</p>
+        <div class="newsletter-row"><input type="email" placeholder="Your email"><button aria-label="Subscribe"><i data-lucide="arrow-right" style="width:16px;height:16px;"></i></button></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Blue Trust Consulting Limited. All rights reserved.</div>
+      <div class="legal-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+<script>
+lucide.createIcons();
+
+// NAV scroll state
+const nav=document.getElementById('nav');
+const toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled', window.scrollY>40);
+  toTop.classList.toggle('show', window.scrollY>600);
+});
+
+// Mobile drawer
+const burger=document.getElementById('burger');
+const drawer=document.getElementById('mobile-drawer');
+burger.addEventListener('click',()=>drawer.classList.add('open'));
+drawer.querySelector('.close-x').addEventListener('click',()=>drawer.classList.remove('open'));
+drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>drawer.classList.remove('open')));
+
+// Back to top
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// Reveal on scroll
+const revealEls=document.querySelectorAll('[data-reveal]');
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.15});
+revealEls.forEach(el=>io.observe(el));
+
+// Animated counters
+const counters=document.querySelectorAll('.stat-num');
+let counted=false;
+const statObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting && !counted){
+      counted=true;
+      counters.forEach(c=>{
+        const target=parseInt(c.dataset.count,10);
+        const suffix=c.dataset.suffix||'+';
+        let cur=0;
+        const step=Math.max(1,Math.round(target/60));
+        const tick=()=>{
+          cur+=step;
+          if(cur>=target){c.textContent=target+suffix;return;}
+          c.textContent=cur+suffix;
+          requestAnimationFrame(tick);
+        };
+        tick();
+      });
+    }
+  });
+},{threshold:.5});
+if(counters.length) statObserver.observe(document.getElementById('stats'));
+
+// Process bar fill on scroll into view
+const track=document.getElementById('processTrack');
+const bar=document.getElementById('processBar');
+const steps=document.querySelectorAll('.p-step');
+const procObserver=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      bar.style.width='88%';
+      steps.forEach((s,i)=>setTimeout(()=>s.classList.add('active'), i*220));
+      procObserver.unobserve(track);
+    }
+  });
+},{threshold:.4});
+if(track) procObserver.observe(track);
+
+// Project filter
+const filterBtns=document.querySelectorAll('.filter-btn');
+const projectCards=document.querySelectorAll('.project-card');
+filterBtns.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    filterBtns.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    projectCards.forEach(card=>{
+      const match = f==='all' || card.dataset.cat===f;
+      card.style.display = match ? '' : 'none';
+    });
+  });
+});
+
+// Testimonial carousel
+const testCards=document.querySelectorAll('.test-card');
+const testDots=document.querySelectorAll('.test-dots button');
+let testIdx=0;
+function showTest(i){
+  testCards.forEach((c,idx)=>c.classList.toggle('active', idx===i));
+  testDots.forEach((d,idx)=>d.classList.toggle('active', idx===i));
+  testIdx=i;
+}
+testDots.forEach(d=>d.addEventListener('click',()=>showTest(parseInt(d.dataset.i,10))));
+setInterval(()=>showTest((testIdx+1)%testCards.length), 6000);
+
+// Form validation + fake submit
+const cbForm=document.getElementById('cbForm');
+const cbSubmit=document.getElementById('cbSubmit');
+const cbBtnText=document.getElementById('cbBtnText');
+const formSuccess=document.getElementById('formSuccess');
+cbForm.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  let valid=true;
+  const fields=[
+    {el:document.getElementById('fname'), test:v=>v.trim().length>1, msg:'Please enter your name'},
+    {el:document.getElementById('fphone'), test:v=>v.trim().length>6, msg:'Please enter a valid phone number'},
+    {el:document.getElementById('femail'), test:v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), msg:'Please enter a valid email'},
+    {el:document.getElementById('fservice'), test:v=>v!=='', msg:'Please select a service'},
+  ];
+  fields.forEach(f=>{
+    const errSpan=f.el.closest('.field').querySelector('.err');
+    if(!f.test(f.el.value)){ errSpan.textContent=f.msg; f.el.style.borderColor='#DC2626'; valid=false; }
+    else{ errSpan.textContent=''; f.el.style.borderColor='#DCE6F5'; }
+  });
+  if(!valid) return;
+  cbBtnText.textContent='Sending...';
+  cbSubmit.disabled=true;
+  setTimeout(()=>{
+    cbBtnText.textContent='Request Callback';
+    cbSubmit.disabled=false;
+    formSuccess.style.display='flex';
+    cbForm.reset();
+    setTimeout(()=>formSuccess.style.display='none', 5000);
+  },1200);
+});
+
+// Ledger / network canvas background in hero
+(function(){
+  const canvas=document.getElementById('ledger');
+  const ctx=canvas.getContext('2d');
+  let w,h,nodes=[];
+  function resize(){
+    w=canvas.width=canvas.offsetWidth*devicePixelRatio;
+    h=canvas.height=canvas.offsetHeight*devicePixelRatio;
+  }
+  function initNodes(){
+    nodes=[];
+    const count=Math.min(46, Math.floor((canvas.offsetWidth*canvas.offsetHeight)/26000));
+    for(let i=0;i<count;i++){
+      nodes.push({
+        x:Math.random()*w, y:Math.random()*h,
+        vx:(Math.random()-0.5)*0.25*devicePixelRatio, vy:(Math.random()-0.5)*0.25*devicePixelRatio,
+        r:Math.random()*1.6+1
+      });
+    }
+  }
+  function frame(){
+    ctx.clearRect(0,0,w,h);
+    nodes.forEach(n=>{
+      n.x+=n.vx; n.y+=n.vy;
+      if(n.x<0||n.x>w) n.vx*=-1;
+      if(n.y<0||n.y>h) n.vy*=-1;
+    });
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        const maxDist=170*devicePixelRatio;
+        if(dist<maxDist){
+          ctx.strokeStyle=`rgba(22,197,255,${(1-dist/maxDist)*0.28})`;
+          ctx.lineWidth=1;
+          ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();
+        }
+      }
+    }
+    nodes.forEach(n=>{
+      ctx.fillStyle='rgba(143,225,255,0.85)';
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill();
+    });
+    requestAnimationFrame(frame);
+  }
+  function boot(){ resize(); initNodes(); }
+  window.addEventListener('resize', boot);
+  boot();
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){ requestAnimationFrame(frame); }
+})();
+</script>
+</body>
+</html>
